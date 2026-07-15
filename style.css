@@ -1,0 +1,240 @@
+/* =========================
+   Fonts
+========================= */
+
+@font-face {
+  font-family: "DoranFaNum";
+  src: url("assets/fonts/DoranFaNum-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "DoranFaNum";
+  src: url("assets/fonts/DoranFaNum-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-display: swap;
+}
+
+/* =========================
+   Reset
+========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  direction: rtl;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "DoranFaNum", sans-serif;
+  background: #ffffff;
+  color: #111;
+  line-height: 2.2;
+}
+
+/* =========================
+   Main Wrapper
+========================= */
+
+.page {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  background: #ffffff;
+}
+
+/* ✅ دسکتاپ 700px */
+@media (min-width: 768px) {
+  body {
+    background: #f5f5f5;
+  }
+
+  .page {
+    max-width: 700px;
+    background: #ffffff;
+    box-shadow: 0 0 40px rgba(0,0,0,0.06);
+    min-height: 100vh;
+  }
+}
+
+/* =========================
+   Header
+========================= */
+
+.site-header {
+  height: 70px;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.header-logo {
+  width: 45px;
+  height: 45px;
+  object-fit: contain;
+}
+
+.header-title {
+  font-size: 16px;   /* بزرگ‌تر شد */
+  font-weight: 700;
+  text-align: center;
+}
+
+/* =========================
+   Profile Card
+========================= */
+
+.profile-section {
+  padding: 48px 20px 0;
+}
+
+.profile-card {
+  padding: 22px 20px 28px;
+  background: #f3f3f3;
+  border-radius: 14px;
+  text-align: center;
+}
+
+.profile-image {
+  width: 140px;
+  height: 140px;
+  margin: 0 auto 18px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.martyr-name {
+  font-size: 20px;  /* بزرگ‌تر شد */
+  font-weight: 700;
+  margin-bottom: 22px;
+}
+
+.profile-info {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px 12px;
+}
+
+.info-label {
+  font-size: 14px;  /* بزرگ‌تر شد */
+  color: #888;
+}
+
+.info-item strong {
+  font-size: 16px;  /* بزرگ‌تر شد */
+  font-weight: 700;
+}
+
+/* =========================
+   Media (Images & Video)
+========================= */
+
+.media-section {
+  padding: 0 32px;
+  margin-top: 80px;
+}
+
+.image-card,
+.video-card {
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+
+  /* سایه دقیق فیگما */
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+
+.image-card img,
+.video-card video {
+  width: 100%;
+  display: block;
+}
+
+/* اگر ویدیو هنوز آپلود نشده */
+.empty-video {
+  min-height: 350px;
+  background: #e0e0e0;
+}
+
+/* =========================
+   Text Section
+========================= */
+
+.text-section {
+  padding: 0 32px;
+  margin-top: 80px;
+}
+
+.text-section h2 {
+  font-size: 20px;  /* بزرگ‌تر شد */
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+.text-section p {
+  font-size: 15px;   /* قبلاً 13 بود */
+  line-height: 2.3;
+  margin-bottom: 16px;
+  text-align: justify;
+}
+
+/* =========================
+   Footer
+========================= */
+
+.site-footer {
+  margin-top: 90px;
+  padding: 40px 24px 30px;
+  background: #f3f3f3;
+  border-radius: 16px 16px 0 0;
+  text-align: center;
+}
+
+.site-footer h2 {
+  font-size: 18px;
+  margin-bottom: 26px;
+}
+
+.site-footer p {
+  font-size: 14px;
+  line-height: 2.2;
+  margin-bottom: 24px;
+}
+
+.footer-logos {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+.footer-logos img {
+  width: 32px;
+  height: 32px;
+}
+
+/* =========================
+   Audio Section
+========================= */
+
+.audio-card {
+  width: 100%;
+  padding: 18px;
+  background: #f3f3f3;
+  border-radius: 12px;
+
+  /* همان سایه تصاویر */
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+
+.audio-card audio {
+  width: 100%;
+  display: block;
+}
