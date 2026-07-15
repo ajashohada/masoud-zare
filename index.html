@@ -260,6 +260,35 @@
     </footer>
 
   </main>
+<script>
+  // === Biography Show More / Show Less ===
+  const bioToggleBtn = document.getElementById('bioToggleBtn');
+  const bioMore = document.getElementById('bioMore');
+  const bioSection = document.querySelector('.bio-section');
 
+  bioToggleBtn.addEventListener('click', function () {
+
+    const isHidden = bioMore.hasAttribute('hidden');
+
+    if (isHidden) {
+      // نمایش ادامه متن
+      bioMore.removeAttribute('hidden');
+      bioToggleBtn.textContent = 'مشاهده کمتر';
+      bioToggleBtn.setAttribute('aria-expanded', 'true');
+
+    } else {
+      // مخفی کردن ادامه متن
+      bioMore.setAttribute('hidden', '');
+      bioToggleBtn.textContent = 'مشاهده بیشتر';
+      bioToggleBtn.setAttribute('aria-expanded', 'false');
+
+      // برگشت اسکرول به ابتدای زندگی‌نامه
+      bioSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  });
+</script>
+
+</body>
+</html>
 </body>
 </html>
