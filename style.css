@@ -234,6 +234,51 @@ body {
   box-shadow: 0 4px 20px rgba(0,0,0,0.15);
 }
 
+/* =========================
+   Read More / Read Less
+========================= */
+
+.hidden-text {
+  display: none; /* در حالت عادی مخفی است */
+}
+
+/* کلاسی که با جاوا اسکریپت اضافه میشه تا متن رو نشون بده */
+.hidden-text.show {
+  display: block;
+  animation: fadeIn 0.4s ease-in;
+}
+
+/* انیمیشن نرم برای ظاهر شدن متن */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* استایل دکمه */
+.read-more-btn {
+  background: none;
+  border: none;
+  color: #d00000; /* رنگ قرمز مشابه طراحی شما */
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 0;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: 0.3s;
+}
+
+.read-more-btn:hover {
+  opacity: 0.7;
+}
+
+.read-more-btn span {
+  font-size: 12px;
+}
+
 .audio-card audio {
   width: 100%;
   display: block;
